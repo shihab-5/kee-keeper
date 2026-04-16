@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <div className='flex flex-col items-center bg-emerald-800 pt-16 gap-5 pb-9 mt-16'>
+            <div className='flex flex-col items-center bg-emerald-800 pt-16 gap-5 pb-9'>
                <div className="">
                 <img src="/logo-xl.png" alt="" />
                </div>
@@ -55,7 +55,7 @@ const Footer = () => {
        <div className='w-[60%] text-gray-500'><hr /></div>
 
                <div className="flex justify-around items-center gap-80">
-                 <p className='text-base-100'>Copyright © {new Date().getFullYear()} - All right reserved</p>
+<p className='text-base-100'>Copyright © {new Date().getFullYear()} - All right reserved</p>
                   <nav>
     <a className="text-base-300">Terms of use</a>
     <a className="text-base-300">Privacy policy</a>
