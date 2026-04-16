@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { IoIosPersonAdd } from "react-icons/io";
 import Friends from './home/friends';
 
@@ -11,7 +11,9 @@ const Banner = () => {
 relationships that matter most.</h3>
             <button className='btn btn-info bg-emerald-800 text-base-100 font-bold'><IoIosPersonAdd /> Add a Friend</button>
         </div>
-        <Friends></Friends>
+    <Suspense fallback={<h1 className='text-center font-black text-7xl my-20'>Loading...</h1>}>
+                <Friends></Friends>
+    </Suspense>
        </>
     );
 };

@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { Link } from 'react-router';
 
 
 const data=fetch('/friends.json').then(res=>res.json())
@@ -33,12 +34,12 @@ const Friends = () => {
 
         {
           friends.map((friend,ind)=>{
-           const {picture,name,tags,next_due_date,status}=friend
+           const {id,picture,name,tags,next_due_date,status}=friend
            const diff =new Date().getTime() - new Date(next_due_date).getTime();
 
 const daysAgo = Math.floor(diff / (1000 * 60 * 60 * 24));
          return(
-              <div key={ind} className='flex flex-col bg-base-100 rounded-2xl gap-3 py-4 items-center'>
+              <Link to={`/details/${id}`} key={ind} className='flex flex-col bg-base-100 rounded-2xl gap-3 py-4 items-center'>
                  <img src={picture} className='rounded-full w-[30%]' alt="" />
                  <p className='font-bold text-2xl'>{name}</p>
                  <p>{daysAgo}d ago</p>
@@ -51,7 +52,7 @@ const daysAgo = Math.floor(diff / (1000 * 60 * 60 * 24));
                </div>
                  <p className={`bg-green-400 rounded-full py-1 px-2 font-bold text-white ${status==='overdue'?"bg-red-700":"bg-green-700"}
                  ${status==='almost due'?"bg-lime-500":"bg-green-700"}`}>{status}</p>
-              </div>
+              </Link>
         )
       })
       }  

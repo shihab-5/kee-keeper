@@ -8,6 +8,7 @@ import Banner from './component/banner';
 import Time from './component/pages/timeline';
 import Start from './component/pages/starts';
 import NotFound from './notfound';
+import Detail from './component/home/details';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,12 @@ const router = createBrowserRouter([
       {
         path:'/starts',
         Component:Start,
+      },
+      {
+        path:'/details/:id',
+        loader:({params})=>fetch("/friends.json").then(res=>res.json()).
+        then(friends =>friends.find(friend=>friend.id===Number(params.id))),
+        Component:Detail,
       }
 
     ],
