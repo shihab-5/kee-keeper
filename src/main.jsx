@@ -9,6 +9,7 @@ import Time from './component/pages/timeline';
 import Start from './component/pages/starts';
 import NotFound from './notfound';
 import Detail from './component/home/details';
+import FriendProvider from './component/home/context';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    
+<FriendProvider>
+        <RouterProvider router={router} />,
+
+</FriendProvider>
 
   </StrictMode>,
 )

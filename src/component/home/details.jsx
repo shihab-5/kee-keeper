@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router';
 import { FaBell } from "react-icons/fa";
 import { IoArchive } from "react-icons/io5";
@@ -6,12 +6,15 @@ import { AiFillDelete } from "react-icons/ai";
 import { LuPhoneCall } from "react-icons/lu";
 import { IoMdText } from "react-icons/io";
 import { IoVideocamOutline } from "react-icons/io5";
+import { friendContext } from './context';
 
 
 const Detail = () => {
     const friend=useLoaderData();
 
 const {name,picture,bio,tags,status,email,next_due_date,goal,days_since_contact}=friend
+
+  const {handleCall,handleText,handleVideo}=useContext(friendContext)
     return (
         <div className='grid grid-cols-5 grid-rows-7 gap-3 w-[70%] mt-20 mx-auto rounded-2xl'>
            <div className="col-span-2 row-span-4 flex flex-col py-7 gap-2.5 items-center bg-white rounded-2xl">
@@ -58,13 +61,13 @@ const {name,picture,bio,tags,status,email,next_due_date,goal,days_since_contact}
             <p className='font-bold text-2xl justify-center'>Quick Check-In</p>
             <div className='grid grid-cols-3 gap-5'>
                <div className='bg-base-300'>
-                <button className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 '><LuPhoneCall /> Call</button>
+                <button onClick={()=>handleCall(friend)} className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 '><LuPhoneCall /> Call</button>
                </div>
                <div className=' bg-base-300'>
-                <button className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 '><IoMdText /> Text</button>
+                <button onClick={()=>handleText(friend)} className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 '><IoMdText /> Text</button>
                </div>
                <div className=' bg-base-300'>
-                <button className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 '><IoVideocamOutline /> Video</button>
+                <button onClick={()=>handleVideo(friend)} className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 '><IoVideocamOutline /> Video</button>
                </div>
             </div>
            </div>

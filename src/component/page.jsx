@@ -8,7 +8,7 @@ import { BsGraphDown } from "react-icons/bs";
 const Nav = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm px-16">
+            <div className="navbar bg-base-100 shadow-sm px-16 ">
   <div className="flex-1">
     <a className="btn btn-ghost text-xl">
         <img src="/logo.png" alt="" />

@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { createContext } from 'react';
 
-const context = () => {
+export const friendContext=createContext()
+const FriendProvider = ({children}) => {
+
+    const [timeline,setStore]=useState([]);
+
+    const data={
+         timeline,
+         setStore,
+    }
     return (
-        <div>
-            
-        </div>
+       <friendContext.Provider value={data}>
+        {children}
+       </friendContext.Provider>
     );
 };
 
-export default context;
+export default FriendProvider;
