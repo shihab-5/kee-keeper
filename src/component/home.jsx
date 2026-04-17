@@ -5,7 +5,7 @@ import Footer from './footer';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-base-300'>
     <div>
         <Nav></Nav>
     </div>
