@@ -31,7 +31,7 @@ const Start = ({ isAnimationActive = true }) => {
         <div>
             <div className='my-10 mx-4 md:mx-8 lg:mx-36 flex flex-col gap-4'>
                 <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Friendship Analysis</h1>
-                <div className='flex justify-center bg-base-100 mt-12 md:mt-24 overflow-x-auto'>
+                <div className='flex justify-center bg-base-100  md:mt-24 overflow-x-auto'>
                     <div className='flex flex-col items-center'>
                         <p className='my-3 md:my-5 text-green-950 font-bold text-lg md:text-2xl'>By interaction Type</p>
                         <PieChart width={Math.min(window.innerWidth - 40, 400)} height={400}>

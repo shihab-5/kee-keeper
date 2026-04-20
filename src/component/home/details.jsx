@@ -61,13 +61,13 @@ const {name,picture,bio,tags,status,email,next_due_date,goal,days_since_contact}
             <p className='font-bold text-2xl justify-center'>Quick Check-In</p>
             <div className='grid grid-cols-3 gap-5'>
                <div className='bg-base-300'>
-                <button onClick={()=>handle(friend,'Call')} className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 text-center '><LuPhoneCall /> Call</button>
+                <button onClick={()=>handle(friend,'Call')} className='flex flex-col w-full items-center rounded-2xl gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 text-center '><LuPhoneCall /> Call</button>
                </div>
                <div className=' bg-base-300'>
-                <button onClick={()=>handle(friend,'Text')} className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 text-center '><IoMdText /> Text</button>
+                <button onClick={()=>handle(friend,'Text')} className='flex flex-col w-full items-center rounded-2xl gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 text-center '><IoMdText /> Text</button>
                </div>
                <div className=' bg-base-300'>
-                <button onClick={()=>handle(friend,'Video')} className='flex flex-col gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 text-center '><IoVideocamOutline /> Video</button>
+                <button onClick={()=>handle(friend,'Video')} className='flex flex-col w-full items-center rounded-2xl gap-2 py-2.5 px-6 font-bold text-2xl bg-base-300 text-center '><IoVideocamOutline /> Video</button>
                </div>
             </div>
            </div>
