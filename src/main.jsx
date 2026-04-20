@@ -10,6 +10,7 @@ import Start from './component/pages/starts';
 import NotFound from './notfound';
 import Detail from './component/home/details';
 import FriendProvider from './component/home/context';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,7 @@ createRoot(document.getElementById('root')).render(
     
 <FriendProvider>
         <RouterProvider router={router} />,
-
+<ToastContainer />
 </FriendProvider>
 
   </StrictMode>,
