@@ -16,8 +16,8 @@ const {name,picture,bio,tags,status,email,next_due_date,goal,days_since_contact}
 
   const {handle}=useContext(friendContext)
     return (
-        <div className='grid grid-cols-5 grid-rows-7 gap-3 w-[70%] mt-20 mx-auto rounded-2xl'>
-           <div className="col-span-2 row-span-4 flex flex-col py-7 gap-2.5 items-center bg-white rounded-2xl">
+        <div className='grid grid-cols-3 grid-rows-7 md:grid-cols-5 md:grid-rows-7 gap-2.5 md:gap-3 w-[80%] md:w-[70%] mt-20 mx-auto rounded-2xl'>
+           <div className="col-span-3 row-span-2 md:col-span-2 md:row-span-4 flex flex-col py-7 gap-2.5 items-center bg-white rounded-2xl">
             <img src={picture} className='w-[25%] rounded-full' alt="" />
             <p className='font-bold text-2xl'>{name}</p>
             <div className='flex gap-3'>
@@ -32,32 +32,32 @@ const {name,picture,bio,tags,status,email,next_due_date,goal,days_since_contact}
                  <p className='italic text-gray-600 text-center'>{bio}</p>
                 <p className='text-gray-500'>Email:{email}</p>
            </div>
-           <div className="col-span-1 row-span-2 gap-2.5 flex flex-col bg-base-100 rounded-2xl items- justify-center">
+           <div className="col-span-1 row-span-1 md:col-span-1 md:row-span-2 gap-2.5 flex flex-col bg-base-100 rounded-2xl items- justify-center">
             <p className='font-bold text-4xl text-green-900 text-center'>{days_since_contact}</p>
             <p className='text-2xl text-center'>day since contact</p>
            </div>
-           <div className="col-span-1 row-span-2 flex gap-2.5 flex-col bg-base-100 rounded-2xl items- justify-center">
+           <div className="col-span-1 row-span-1 md:col-span-1 md:row-span-2 flex gap-2.5 flex-col bg-base-100 rounded-2xl items- justify-center">
             <p  className='font-bold text-4xl text-green-900 text-center'>{goal}</p>
             <p className='text-2xl text-center'>Goals(days)</p>
            </div>
-           <div className="col-span-1 row-span-2 flex gap-2.5 flex-col bg-base-100 rounded-2xl items- justify-center">
+           <div className="col-span-1 row-span-1 md:col-span-1 md:row-span-2 flex gap-2.5 flex-col bg-base-100 rounded-2xl items- justify-center">
             <p  className='font-bold text-4xl text-green-900 text-center'>{next_due_date}</p>
             <p className='text-2xl text-center'>next due</p>
            </div>
-           <div className="col-span-3 row-span-2 flex justify-between items-center bg-base-100 rounded-2xl py-3 px-5">
+           <div className="col-span-3 row-span-1 md:col-span-3 md:row-span-2 flex justify-between items-center bg-base-100 rounded-2xl py-3 px-5">
             <div className='flex flex-col gap-3 items-center justify-center'>
                 <p className='text-3xl font-bold text-green-800'>relationship goal</p>
             <p className='text-2xl text-gray-700'>connect every <span className='font-bold'>{goal} days</span></p>
             </div>
             <button className='btn font-bold'>Edit</button>
            </div>
-           <div className="h-full col-span-2 row-span-2 flex flex-col gap-7">
+           <div className="h-full col-span-3 row-span-1 md:col-span-2 md:row-span-2 flex flex-col gap-7">
             <div className=" btn bg-base-100 rounded-2xl"><FaBell /> Snooze 2 weeks</div>
            <div className=" btn bg-base-100 rounded-2xl"><IoArchive /> Archive</div>
            <div className="btn bg-base-100 rounded-2xl text-red-700"><AiFillDelete /> Delete</div>
            </div>
         
-           <div className="col-span-3 row-span-2 bg-base-100 flex flex-col gap-3 justify-between p-6">
+           <div className="col-span-3 row-span-1 md:col-span-3 md:row-span-2 bg-base-100 flex flex-col gap-3 justify-between p-6">
             <p className='font-bold text-2xl justify-center'>Quick Check-In</p>
             <div className='grid grid-cols-3 gap-5'>
                <div className='bg-base-300'>

@@ -54,7 +54,7 @@ const Footer = () => {
                </div> 
        <div className='w-[60%] text-gray-500'><hr /></div>
 
-               <div className="flex md:flex-wrap-reverse md:gap-20 justify-around items-center gap-80">
+               <div className="flex md:flex-wrap-reverse md:gap-12 justify-around items-center gap-80">
 <p className='text-base-100'>Copyright © {new Date().getFullYear()} - All right reserved</p>
                   <nav>
     <a className="text-base-300">Terms of use</a>

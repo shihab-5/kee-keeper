@@ -8,8 +8,8 @@ const Friends = () => {
     console.log(friends)
     return (
         <div className='bg-base-300 pb-16 '>
-    <div className='w-[75%] mx-auto'>
-        <div className='grid grid-cols-4 md:grid-cols-4 sm:grid-cols-2  gap-4 py-8 shadow-2xs shadow-gray-400'>
+    <div className='w-[85%] lg:w-[75%] mx-auto'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-4 py-8 shadow-2xs shadow-gray-400'>
             <div className='bg-white rounded-2xl flex flex-col gap-3 py-9'>
                 <p className='font-bold text-4xl text-center'>{friends.length}</p>
                 <p className='text-center '>total Friends</p>
@@ -30,7 +30,7 @@ const Friends = () => {
         
           <h1 className='m-3 font-bold text-2xl'>Your Friends</h1>
 
-    <div className='grid grid-cols-4 lg:grid-cols-4 sm:grid-cols-2 gap-9 '>
+    <div className='grid grid-cols-2 xl:grid-cols-4 lg:gap-9 gap-3 '>
 
         {
           friends.map((friend,ind)=>{
